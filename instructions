@@ -34,3 +34,13 @@ $ sudo iptables -A INPUT -p tcp --dport 587 -m iprange --src-range 172.31.32.200
 
 #Task 7
 Each evening Backup server used SMB default port to get mail backups from Mail server
+$ sudo iptables -A INPUT -p tcp --dport 445 -s 172.31.32.250 -j ACCEPT
+
+#Task 8
+SSH default port of Mail server should be available for IT department.
+$ sudo iptables -A INPUT -p tcp --dport 22 -m iprange --src-range 172.31.32.200-172.31.32.220 -j ACCEPT
+
+#Task 9
+all other ports, except 443, should be restricted
+$ sudo iptables -A INPUT -p tcp --dport 443 -j ACCEPT
+$ sudo iptables -A INPUT -j DROP
