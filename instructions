@@ -44,3 +44,5 @@ $ sudo iptables -A INPUT -p tcp --dport 22 -m iprange --src-range 172.31.32.200-
 all other ports, except 443, should be restricted
 $ sudo iptables -A INPUT -p tcp --dport 443 -j ACCEPT
 $ sudo iptables -A INPUT -j DROP
+
+$ sudo iptables-save > /etc/iptables/rules.v4    - save iptables rules in separate file
