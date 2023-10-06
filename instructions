@@ -3,7 +3,7 @@ IPv4 CIDR
 
 $ sudo apt-get install iptables 					- update/install iptables
 $ sudo iptables -L						            - show all iptables
-$ sudo iptables -F				                - clear all the currently configured rules
+$ sudo iptables -F				                    - clear all the currently configured rules
 
 #Task 1
 25 port TCP of mail server should accept connections from internet:
