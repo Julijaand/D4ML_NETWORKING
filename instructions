@@ -14,7 +14,7 @@ $ sudo iptables -F				                    - clear all the currently configured r
 
 #Task 1
 25 port TCP of mail server should accept connections from internet:
-$ sudo iptables -A INPUT -p tcp --dport 25 -s 0.0.0.0/0 -j ACCEPT
+$ sudo iptables -A INPUT -p tcp --dport 25 -j ACCEPT
 
 #Task 2
 53 port TCP\UDP should be open for outbound connections for DNS use:
